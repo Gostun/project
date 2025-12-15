@@ -1,0 +1,241 @@
+:root {
+    --gold: #f6e3b0;
+    --bg-dark: #050608;
+    --card-bg: #151821;
+    --text-main: #d0c6b3;
+}
+
+
+/* ===== BASE ===== */
+
+.ipoteka-page {
+    background: radial-gradient(circle at 0 0, #0b060e 0, transparent 55%), radial-gradient(circle at 100% 100%, #0e1b1d 0, transparent 55%), var(--bg-dark);
+    padding: 40px 0 60px;
+    color: var(--text-main);
+}
+
+
+/* ===== COMMON CARD ===== */
+
+.ipoteka-card,
+.ipoteka-block,
+.ipoteka-flex,
+.ipoteka-row,
+.ipoteka-hero-box {
+    background: var(--card-bg);
+    border-radius: 18px;
+    border: 1px solid rgba(245, 224, 175, .35);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .95);
+}
+
+
+/* ===== HERO ===== */
+
+.ipoteka-hero {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ipoteka-hero-banner img {
+    width: 100%;
+    border-radius: 18px;
+    display: block;
+    object-fit: cover;
+}
+
+.ipoteka-hero-box {
+    padding: 22px 18px 26px;
+}
+
+.ipoteka-hero-box h1 {
+    font-size: 22px;
+    color: var(--gold);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: .14em;
+}
+
+.ipoteka-hero-box h2 {
+    font-size: 16px;
+    color: var(--gold);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.ipoteka-hero-lead {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--gold);
+    margin-bottom: 12px;
+}
+
+.ipoteka-hero-box p {
+    font-size: 15px;
+    color: #c7bead;
+}
+
+
+/* ===== GRID ===== */
+
+.ipoteka-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.ipoteka-card {
+    padding: 22px 20px 24px;
+}
+
+.ipoteka-card h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: .12em;
+}
+
+.ipoteka-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ipoteka-card li {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.ipoteka-card li::before {
+    content: "•";
+    color: var(--gold);
+    font-size: 18px;
+    line-height: 1;
+}
+
+.ipoteka-card-wide {
+    grid-column: 1 / -1;
+}
+
+.ipoteka-quote {
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.ipoteka-cta {
+    margin-top: 10px;
+    color: var(--gold);
+    font-weight: 500;
+}
+
+
+/* ===== OLD BLOCKS (упрощены) ===== */
+
+.ipoteka-block,
+.ipoteka-flex,
+.ipoteka-row {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 26px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.ipoteka-text {
+    font-size: 15px;
+    color: #c7bead;
+}
+
+.ipoteka-text h1,
+.ipoteka-text h2 {
+    font-size: 22px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: .14em;
+    margin-bottom: 12px;
+}
+
+.ipoteka-text h3 {
+    margin-top: 18px;
+    font-size: 17px;
+    color: #d9b25c;
+}
+
+.ipoteka-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+}
+
+.ipoteka-text li {
+    padding-left: 1.4em;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.ipoteka-text li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+}
+
+.ipoteka-text .lead,
+.ipoteka-text .final,
+.ipoteka-text .closing {
+    color: var(--gold);
+    font-weight: 500;
+}
+
+
+/* ===== TABLET ===== */
+
+@media (min-width: 768px) {
+    .ipoteka-page {
+        padding: 60px 0 80px;
+    }
+    .ipoteka-hero {
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .ipoteka-hero-box h1 {
+        font-size: 26px;
+    }
+    .ipoteka-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px;
+    }
+    .ipoteka-block,
+    .ipoteka-flex,
+    .ipoteka-row {
+        flex-direction: row;
+        padding: 36px 32px;
+    }
+}
+
+
+/* ===== DESKTOP ===== */
+
+@media (min-width: 1024px) {
+    .ipoteka-hero-box h1 {
+        font-size: 30px;
+    }
+    .ipoteka-text h1,
+    .ipoteka-text h2 {
+        font-size: 28px;
+    }
+    .ipoteka-row {
+        align-items: center;
+        gap: 26px;
+    }
+}

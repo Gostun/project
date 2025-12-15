@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Diamond Group — карта объекта</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/karta.css" />
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            "name": "Diamond Group",
+            "url": "https://diamond--group.ru",
+            "logo": "https://diamond--group.ru/img/heros.png",
+            "telephone": "+7-918-885-02-55",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Краснодар",
+                "addressCountry": "RU"
+            },
+            "areaServed": "Краснодар",
+            "priceRange": "₽₽",
+            "sameAs": []
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container header">
+            <h1 class="logo">Diamond Group</h1>
+            <button class="burger" id="burger">&#9776;</button>
+            <nav id="navMenu" class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="uslugi.html">Услуги</a></li>
+                    <li><a href="ipoteka.html">Ипотека</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="otzyvy.html">Отзывы</a></li>
+                    <li><a href="staff.html">Сотрудники</a></li>
+                    <li><a href="karta.html">Адрес</a></li>
+                </ul>
+                <!-- КНОПКА ВНУТРИ БУРГЕР-МЕНЮ -->
+                <button class="call-btn mobile-only" id="mobileCallBtn">Заказать звонок</button>
+            </nav>
+
+            <!-- КНОПКА ДЛЯ ДЕСКТОПА -->
+            <button class="call-btn desktop-only" id="headerCallBtn">Заказать звонок</button>
+        </div>
+    </header>
+
+
+    <!-- ===== CONTENT ===== -->
+    <main class="container">
+        <section class="card1">
+
+
+            <!-- LAYOUT -->
+            <div class="layout1">
+
+                <!-- MAP -->
+                <div id="map"></div>
+
+                <!-- INFO -->
+                <aside class="info1">
+
+                    <div class="address-card">
+                        <img src="fon.jpg" alt="Фото объекта" style="width:100%;border-radius:8px;display:block;object-fit:cover;max-height:180px;" />
+                    </div>
+
+                    <div>
+                        <button id="zoomTo" class="btn1">Найти на карте</button>
+                        <button id="directions" class="btn1">Построить маршрут</button>
+                    </div>
+
+                    <div class="address-card">
+                        <h2>Контакты агента</h2>
+                        <p>Diamond Group</p>
+                        <p>+7 (918) 885-02-55 — Алексей</p>
+
+                    </div>
+
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">Diamond Group</div>
+
+                <ul class="footer-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="uslugi.html">Услуги</a></li>
+                    <li><a href="ipoteka.html">Ипотека</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="otzyvy.html">Отзывы</a></li>
+                    <li><a href="staff.html">Сотрудники</a></li>
+                    <li><a href="karta.html">Адрес</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Diamond Group — Агентство недвижимости</p>
+                <p>Телефон: +7 (918) 885-02-55</p>
+            </div>
+        </div>
+    </footer>
+    <div id="callModal" class="modal">
+        <div class="modal-content styled-modal">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <h3>Свяжитесь с нашими специалистами</h3>
+            <div class="realtor-cards">
+                <div class="realtor-card">
+                    <div class="realtor-name">Алексей</div>
+                    <a href="tel:+79188850255">+7 (918) 885-02-55</a>
+                </div>
+                <div class="realtor-card">
+                    <div class="realtor-name">Роман</div>
+                    <a href="tel:+79181937973">+7 (918) 193-79-73</a>
+                </div>
+                <div class="realtor-card">
+                    <div class="realtor-name">Абел</div>
+                    <a href="tel:+79186925434">+7 (918) 692-54-34</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===== MAP SCRIPT ===== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            /* ======================
+               КАРТА
+            ====================== */
+
+            const coords = [45.071638, 39.007104];
+
+            const map = L.map("map", {
+                zoomControl: true,
+                scrollWheelZoom: false // чтобы не мешала прокрутке
+            }).setView(coords, 15);
+
+            L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+                maxZoom: 19,
+                attribution: "&copy; OpenStreetMap"
+            }).addTo(map);
+
+            const marker = L.marker(coords)
+                .addTo(map)
+                .bindPopup("<b>ул. Байбакова, 1</b><br>Краснодар");
+
+
+            setTimeout(() => {
+                map.invalidateSize();
+            }, 300);
+
+            document.getElementById("zoomTo").addEventListener("click", () => {
+                map.setView(coords, 17);
+                marker.openPopup();
+            });
+
+            document.getElementById("directions").addEventListener("click", () => {
+                const url = `https://www.google.com/maps/dir/?api=1&destination=${coords[0]},${coords[1]}`;
+                window.open(url, "_blank");
+            });
+
+            /* ======================
+               МЕНЮ + МОДАЛКА
+            ====================== */
+
+            const burger = document.getElementById("burger");
+            const navMenu = document.getElementById("navMenu");
+            const headerCallBtn = document.getElementById("headerCallBtn");
+            const mobileCallBtn = document.getElementById("mobileCallBtn");
+            const callModal = document.getElementById("callModal");
+            const closeModal = document.getElementById("closeModal");
+
+            if (burger && navMenu) {
+                burger.addEventListener("click", () => {
+                    navMenu.classList.toggle("open");
+                    document.body.classList.toggle("menu-open");
+                });
+            }
+
+            function openModal() {
+                callModal.style.display = "flex";
+            }
+
+            [headerCallBtn, mobileCallBtn].forEach(btn => {
+                if (btn) btn.addEventListener("click", openModal);
+            });
+
+            closeModal.addEventListener("click", () => {
+                callModal.style.display = "none";
+            });
+
+            window.addEventListener("click", e => {
+                if (e.target === callModal) {
+                    callModal.style.display = "none";
+                }
+            });
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

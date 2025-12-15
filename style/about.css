@@ -1,0 +1,285 @@
+/* ---------- HERO "О НАС" ---------- */
+
+.hero-about {
+    background: url("/img/abaut.jpg") center/cover no-repeat fixed;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    color: #f5f4f0;
+}
+
+
+/* тёмный слой поверх фото */
+
+.hero-about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.hero-about-content {
+    position: relative;
+    max-width: 620px;
+    margin-left: 40px;
+    padding: 26px 26px 22px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.795);
+    box-shadow: 0 22px 70px rgba(0, 0, 0, 0.95);
+}
+
+.hero-about h1 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 1.35;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.hero-about p {
+    margin: 0 0 18px;
+    font-size: 15px;
+    color: #d0c6b3;
+}
+
+.hero-btn {
+    padding: 11px 24px;
+    background: linear-gradient(135deg, #f6e3b0, #d9b25c);
+    color: #201107;
+    border: none;
+    border-radius: 999px;
+    font-size: 13px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.95);
+}
+
+.hero-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 26px 80px rgba(0, 0, 0, 1);
+    background: linear-gradient(135deg, #fff2c8, #d9b25c);
+}
+
+
+/* ---------- ТЕКСТОВЫЙ БЛОК "О НАС" ---------- */
+
+.about-text {
+    padding: 60px 20px 70px;
+    background: radial-gradient(circle at 0 0, #0b060e 0, transparent 55%), radial-gradient(circle at 100% 100%, #0e1b1d 0, transparent 55%), #050608;
+    color: #e0d8c7;
+}
+
+.about-text .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #f6e3b0;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+.about-text h3 {
+    font-size: 20px;
+    color: #d9b25c;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.about-text p {
+    font-size: 15px;
+    margin-bottom: 14px;
+    line-height: 1.7;
+    color: #c7bead;
+}
+
+.about-text ul {
+    padding-left: 0;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.about-text ul li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding-left: 1.8em;
+    position: relative;
+    color: #d0c6b3;
+}
+
+.about-text ul li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    color: #f6e3b0;
+}
+
+
+/* цитата / миссия */
+
+.about-text blockquote {
+    font-style: italic;
+    background: #151821;
+    padding: 16px 18px;
+    border-left: 4px solid #d9b25c;
+    margin: 22px 0;
+    border-radius: 10px;
+    color: #f6e3b0;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+}
+
+
+/* финальный акцент */
+
+.final-text {
+    font-weight: 500;
+    font-size: 16px;
+    color: #f6e3b0;
+    background: #151821;
+    padding: 20px 22px;
+    border-radius: 16px;
+    text-align: center;
+    margin-top: 40px;
+    border: 1px solid rgba(245, 224, 175, 0.5);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.9);
+}
+
+
+/* ---------- АДАПТИВ ---------- */
+
+@media (max-width: 768px) {
+    .hero-about {
+        min-height: auto;
+        padding: 70px 14px 120px;
+        text-align: center;
+        justify-content: center;
+        background-attachment: scroll;
+    }
+    .hero-about-content {
+        margin: 0;
+        margin-top: 50px;
+        padding: 22px 18px 20px;
+    }
+    .hero-about h1 {
+        font-size: 20px;
+    }
+    .hero-about p {
+        font-size: 14px;
+    }
+    .hero-btn {
+        width: 100%;
+        max-width: 280px;
+        font-size: 12px;
+    }
+    .about-text {
+        padding: 40px 16px 50px;
+    }
+    .about-text h2 {
+        font-size: 22px;
+    }
+    .about-text h3 {
+        font-size: 18px;
+    }
+    .about-text p,
+    .about-text ul li,
+    .final-text {
+        font-size: 14px;
+    }
+}
+
+
+/* ---------- БУРГЕР / МЕНЮ ДЛЯ МОБИЛКИ ---------- */
+
+.burger {
+    display: none;
+    background: none;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    color: #f6e3b0;
+}
+
+
+/* скрывать / показывать пункты меню на телефоне */
+
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+    .nav {
+        display: none;
+        flex-direction: column;
+        background: #050608;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        padding: 15px 0 20px;
+        z-index: 999;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .nav.open {
+        display: flex;
+    }
+    .nav-list {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+/* desktop / mobile only */
+
+.desktop-only {
+    display: inline-block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
+        width: 90%;
+        margin: 10px auto;
+    }
+    .call-btn.mobile-only {
+        display: block;
+        background: linear-gradient(135deg, #f6e3b0, #d9b25c);
+        color: #201107;
+        border: none;
+        border-radius: 999px;
+        padding: 12px 24px;
+        margin: 15px auto 10px;
+        width: 90%;
+        font-size: 14px;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.95);
+    }
+    .call-btn.mobile-only:hover {
+        background: linear-gradient(135deg, #fff2c8, #d9b25c);
+    }
+    .nav.open .call-btn.mobile-only {
+        display: block;
+    }
+}

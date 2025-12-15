@@ -1,0 +1,211 @@
+/* ===== СТРАНИЦА С ОТДЕЛЬНЫМИ СОТРУДНИКАМИ (ТЁМНЫЙ / GOLD) ===== */
+
+:root {
+    --staff-bg: #05060b;
+    --staff-bg-2: #0b0d13;
+    --staff-gold: #f0c15b;
+    --staff-gold-soft: #ffe3a6;
+    --staff-text-main: #f7f4ec;
+    --staff-text-muted: #a4a9c2;
+}
+
+
+/* фон страницы сотрудников */
+
+.staff-page {
+    background: radial-gradient(circle at 0 0, #0b060e 0, transparent 55%), radial-gradient(circle at 100% 100%, #0e1b1d 0, transparent 55%), #050608;
+    color: var(--staff-text-main);
+    padding: 60px 0 80px;
+}
+
+
+/* HERO-секция с заголовком и общей фотографией */
+
+.staff-hero {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    padding: 30px 30px 34px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    gap: 32px;
+    border-radius: 26px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, .9);
+    border: 1px solid rgba(240, 193, 91, .35);
+}
+
+.staff-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.staff-hero-text {
+    position: relative;
+    z-index: 1;
+}
+
+.staff-hero-text h2 {
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    color: var(--staff-gold-soft);
+}
+
+.staff-hero-subtitle {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--staff-text-muted);
+    margin-bottom: 12px;
+}
+
+.staff-hero-photo {
+    position: relative;
+    z-index: 1;
+    align-self: stretch;
+}
+
+.staff-hero-photo img {
+    width: 100%;
+    height: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 22px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .9);
+    border: 1px solid rgba(240, 193, 91, .45);
+}
+
+
+/* сама секция со списком сотрудников */
+
+.staff-page .reviews-section {
+    /* переопределяем светлый фон из otzyvy.css */
+    background: transparent;
+    padding: 10px 20px 0;
+    text-align: left;
+}
+
+.staff-section h2 {
+    margin: 0 auto 26px;
+    max-width: 1200px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: var(--staff-gold-soft);
+}
+
+
+/* слайдер с карточками (используем существующий .reviews-slider) */
+
+.staff-slider {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 4px;
+}
+
+.staff-slider::-webkit-scrollbar-thumb {
+    background-color: rgba(240, 193, 91, .75);
+}
+
+
+/* карточки сотрудников – переопределяем базовый .review-card */
+
+.staff-card {
+    background: radial-gradient(circle at top left, rgba(247, 211, 123, .16), rgba(11, 13, 19, 1) 45%, #05060b 100%);
+    border-radius: 22px;
+    border: 1px solid rgba(240, 193, 91, .35);
+    color: var(--staff-text-main);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, .9);
+    padding: 18px 18px 20px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 360px;
+}
+
+.staff-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background-image: linear-gradient(135deg, #f7d37b, #c6932e);
+    opacity: 0;
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    transition: opacity .18s ease;
+}
+
+.staff-card:hover::before {
+    opacity: 1;
+}
+
+.staff-photo {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 18px;
+    margin-bottom: 14px;
+    border: 1px solid rgba(240, 193, 91, .45);
+}
+
+.staff-name {
+    font-size: 17px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    color: var(--staff-gold-soft);
+}
+
+.staff-position {
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .18em;
+    color: rgba(255, 227, 180, .9);
+}
+
+.staff-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--staff-text-muted);
+    margin-bottom: 12px;
+}
+
+.staff-contacts {
+    font-size: 13px;
+    color: var(--staff-gold-soft);
+    margin-top: auto;
+    border-top: 1px solid rgba(240, 193, 91, .25);
+    padding-top: 10px;
+}
+
+
+/* адаптив */
+
+@media (max-width: 1024px) {
+    .staff-hero {
+        grid-template-columns: 1fr;
+        padding: 24px 20px 26px;
+    }
+    .staff-hero-text h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .staff-page {
+        padding: 40px 0 60px;
+    }
+    .staff-section h2 {
+        font-size: 20px;
+    }
+    .staff-card {
+        min-height: 0;
+    }
+}

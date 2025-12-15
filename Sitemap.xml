@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://diamond--group.ru/</loc>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://diamond--group.ru/uslugi.html</loc>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://diamond--group.ru/ipoteka.html</loc>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://diamond--group.ru/about.html</loc>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://diamond--group.ru/otzyvy.html</loc>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://diamond--group.ru/staff.html</loc>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://diamond--group.ru/karta.html</loc>
+<priority>0.5</priority>
+</url>
+</urlset>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Отзывы — Diamond Group</title>
+    <link rel="stylesheet" href="style/uslugi.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/otzyvy.css" />
+    <link rel="stylesheet" href="style/reviews.css" />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            "name": "Diamond Group",
+            "url": "https://diamond--group.ru",
+            "logo": "https://diamond--group.ru/img/heros.png",
+            "telephone": "+7-918-885-02-55",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Краснодар",
+                "addressCountry": "RU"
+            },
+            "areaServed": "Краснодар",
+            "priceRange": "₽₽",
+            "sameAs": []
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container header">
+            <h1 class="logo">Diamond Group</h1>
+            <button class="burger" id="burger">&#9776;</button>
+            <nav id="navMenu" class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="uslugi.html">Услуги</a></li>
+                    <li><a href="ipoteka.html">Ипотека</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="otzyvy.html">Отзывы</a></li>
+                    <li><a href="staff.html">Сотрудники</a></li>
+                    <li><a href="karta.html">Адрес</a></li>
+                </ul>
+                <!-- КНОПКА ВНУТРИ БУРГЕР-МЕНЮ -->
+                <button class="call-btn mobile-only" id="mobileCallBtn">Заказать звонок</button>
+            </nav>
+
+            <!-- КНОПКА ДЛЯ ДЕСКТОПА -->
+            <button class="call-btn desktop-only" id="headerCallBtn">Заказать звонок</button>
+        </div>
+    </header>
+    <section class="real-stories">
+        <div class="highlight-review">
+            <h2>Реальные истории доверия</h2>
+            <p class="subtitle">Отзывы, которые вдохновляют доверять</p>
+            <div class="hero-card">
+                <img src="img/anna.jpg" alt="Анна и Максим" class="hero-photo">
+                <div class="hero-text">
+                    <h3>Анна и Максим</h3>
+                    <p class="place"><br><span>Краснодар</span></p>
+                    <p class="stars">★★★★★</p>
+                    <p class="quote">“С первого звонка мы поняли, что «наши». Нам всё объяснили, подобрали даже неуступчивую, но идеальную ипотеку. Спасибо за теплоту и профессионализм!”</p>
+                    <p class="date">Сделка: февраль 2024</p>
+                </div>
+            </div>
+        </div>
+
+        <main class="otzyvy">
+            <section class="reviews">
+                <div class="container">
+                    <h2 class="section-title">Отзывы наших клиентов</h2>
+
+                    <div id="reviews-container" class="reviews-slider"></div>
+
+
+                    <div class="pagination">
+                        <button id="prevPage">← Назад</button>
+                        <span id="pageInfo">Страница 1</span>
+                        <button id="nextPage">Вперёд →</button>
+                    </div>
+                </div>
+            </section>
+
+            <script src="script/reviews.js"></script>
+
+
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-logo">Diamond Group</div>
+                    <ul class="footer-menu">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="uslugi.html">Услуги</a></li>
+                        <li><a href="ipoteka.html">Ипотека</a></li>
+                        <li><a href="about.html">О компании</a></li>
+                        <li><a href="staff.html">Сотрудники</a></li>
+                        <li><a href="otzyvy.html">Отзывы</a></li>
+                        <li><a href="karta.html">Адрес</a></li>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Diamond Group — Агентство недвижимости. Все права защищены.</p>
+                    <p>Телефон: +7 (918) 885-02-55 | Алексей </p>
+                </div>
+            </div>
+        </footer>
+        <!-- Модальное окно -->
+        <div id="callModal" class="modal">
+            <div class="modal-content styled-modal">
+                <span class="modal-close" id="closeModal">&times;</span>
+                <h3>Свяжитесь с нашими специалистами</h3>
+                <div class="realtor-cards">
+                    <div class="realtor-card">
+                        <div class="realtor-name">Алексей</div>
+                        <a href="tel:+79188850255">+7 (918) 885-02-55</a>
+                    </div>
+                    <div class="realtor-card">
+                        <div class="realtor-name">Роман</div>
+                        <a href="tel:+79181937973">+7 (918) 193-79-73</a>
+                    </div>
+                    <div class="realtor-card">
+                        <div class="realtor-name">Абел</div>
+                        <a href="tel:+79186925434">+7 (918) 692-54-34</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

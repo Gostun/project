@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Админка — Diamond Group</title>
+    <link rel="stylesheet" href="style/admin-style.css" />
+</head>
+
+<body>
+    <div class="admin-container">
+        <h1>Добавление объекта недвижимости</h1>
+        <form id="addForm">
+
+            <label>Тип жилья:
+        <select name="type" required>
+          <option>Студия</option>
+          <option>1-комнатная</option>
+          <option>2-комнатная</option>
+          <option>3-комнатная</option>
+          <option>Дом</option>
+        </select>
+      </label>
+
+            <label>Город:
+        <input type="text" name="city" value="Краснодар" required />
+      </label>
+
+            <label>Район:
+        <select name="district" required>
+          <option value="Петра Метальникова">Петра Метальникова</option>
+          <option value="Западный обход">Западный обход</option>
+          <option value="ЭНКА, Ближний западный обход">ЭНКА, Ближний западный обход</option>
+          <option value="Кирилла Россинского, Краснодарский">Кирилла Россинского, Краснодарский</option>
+          <option value="Губернский, Восточнокругликовский">Губернский, Восточнокругликовский</option>
+          <option value="Молодежный">Молодежный</option>
+          <option value="Музыкальный, Российский">Музыкальный, Российский</option>
+          <option value="ЦМР, ГМР, ФМР">ЦМР, ГМР, ФМР</option>
+          <option value="Новая Адыгея, пос. Яблоновский">Новая Адыгея, пос. Яблоновский</option>
+          <option value="Дома">Дома</option>
+        </select>
+      </label>
+
+            <label>Цена:
+        <input type="text" name="price" required />
+      </label>
+
+            <label>Описание:
+        <textarea name="description" rows="4" required></textarea>
+      </label>
+
+            <label>
+        <input type="checkbox" name="isPopular" />
+        Популярный объект
+      </label>
+
+            <label>Фотографии:</label>
+            <div id="dropZone" class="drop-zone">Перетащите изображения сюда или нажмите для выбора</div>
+            <!-- Удалено name="images" 👇 -->
+            <input type="file" id="imageInput" accept="image/*" multiple style="display: none;" />
+            <div id="preview" class="preview-list"></div>
+
+            <button type="submit">Сохранить</button>
+        </form>
+
+        <h2>Добавленные объекты</h2>
+        <div id="objectPreview"></div>
+    </div>
+
+    <script src="script/admin.js"></script>
+</body>
+
+</html>

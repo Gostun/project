@@ -1,0 +1,321 @@
+/* Блок "Услуги" */
+
+.uslugi {
+    background: radial-gradient(circle at 0 0, #0b060e 0, transparent 55%), radial-gradient(circle at 100% 100%, #0e1b1d 0, transparent 55%), #050608;
+    color: #f5f4f0;
+}
+
+
+/* интро над услугами */
+
+.hero {
+    width: 100%;
+    aspect-ratio: 100 / 1;
+    background: url('/img/heros.png') center/cover no-repeat;
+}
+
+.hero-full::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+
+.intro h2 {
+    color: #0f0f0f;
+    font-size: 30px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+.intro p {
+    font-size: 17px;
+    max-width: 720px;
+    margin: 0 auto;
+    color: #9b9384;
+}
+
+
+/* сетка услуг */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 40px 20px 50px;
+}
+
+.service-card {
+    background: #151821;
+    border-radius: 16px;
+    padding: 22px 20px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(245, 224, 175, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    text-align: left;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 1);
+    border-color: rgba(255, 239, 196, 0.8);
+}
+
+.service-card h3 {
+    color: #f6e3b0;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.service-card p {
+    font-size: 14px;
+    color: #b0a697;
+}
+
+
+/* Блок "Почему мы" */
+
+.why {
+    padding: 0 22px 92px;
+    display: grid;
+}
+
+.why-title,
+.why h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #f6e3b0;
+    margin-bottom: 26px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.why-card {
+    background: #151821;
+    border-radius: 16px;
+    padding: 22px 20px;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(245, 224, 175, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 1);
+    border-color: rgba(255, 239, 196, 0.8);
+}
+
+.why-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.why-card h3 {
+    color: #f6e3b0;
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.why-card p {
+    color: #b0a697;
+    font-size: 14px;
+}
+
+
+/* список внутри why, если используешь */
+
+.why ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 20px auto 0;
+    text-align: left;
+}
+
+.why ul li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding-left: 1.5em;
+    position: relative;
+    color: #c0b7a5;
+}
+
+.why ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #f6e3b0;
+}
+
+
+/* Новый вариант сетки услуг (если используешь .services-new-grid) */
+
+.services-new-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 26px;
+    padding: 40px 20px 50px;
+}
+
+.service-block {
+    background: #151821;
+    padding: 24px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
+    border: 1px solid rgba(245, 224, 175, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.service-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 1);
+    border-color: rgba(255, 239, 196, 0.8);
+}
+
+.circle-num {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #f6e3b0, #d9b25c);
+    color: #201107;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 48px;
+    border-radius: 50%;
+    margin: 0 auto 14px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.9);
+}
+
+.service-block h3 {
+    color: #f6e3b0;
+    font-size: 18px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.service-block p {
+    font-size: 14px;
+    color: #b0a697;
+}
+
+
+/* Футер */
+
+.footer {
+    background: radial-gradient(circle at 100% 0, rgba(245, 224, 175, 0.18), transparent 55%), #050608;
+    color: #b0a697;
+    padding: 40px 20px 20px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #f6e3b0;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+}
+
+.footer-menu li a {
+    color: #b0a697;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.footer-menu li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #d9b25c, #f6e3b0);
+    transition: width 0.25s;
+}
+
+.footer-menu li a:hover {
+    color: #f6e3b0;
+}
+
+.footer-menu li a:hover::after {
+    width: 100%;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    color: #8e8474;
+    line-height: 1.5;
+}
+
+
+/* Адаптив */
+
+@media (max-width: 768px) {
+    .intro h2 {
+        font-size: 24px;
+    }
+    .intro p {
+        font-size: 15px;
+    }
+    .service-card h3,
+    .service-block h3 {
+        font-size: 16px;
+    }
+    .service-card p,
+    .service-block p {
+        font-size: 13px;
+    }
+    .why h2,
+    .why-title {
+        font-size: 22px;
+    }
+    .why ul li {
+        font-size: 14px;
+    }
+    .footer-top {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .footer-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-bottom {
+        font-size: 12px;
+    }
+}

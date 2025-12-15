@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сотрудники — Diamond Group</title>
+
+    <!-- те же стили, что и на других страницах -->
+    <link rel="stylesheet" href="style/uslugi.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/otzyvy.css" />
+    <link rel="stylesheet" href="style/staff.css" />
+    <!-- если хотите, можно подключить отдельный файл для сотрудников -->
+    <!-- <link rel="stylesheet" href="sotrudniki.css" /> -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            "name": "Diamond Group",
+            "url": "https://diamond--group.ru",
+            "logo": "https://diamond--group.ru/img/heros.png",
+            "telephone": "+7-918-885-02-55",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Краснодар",
+                "addressCountry": "RU"
+            },
+            "areaServed": "Краснодар",
+            "priceRange": "₽₽",
+            "sameAs": []
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container header">
+            <h1 class="logo">Diamond Group</h1>
+            <button class="burger" id="burger">&#9776;</button>
+            <nav id="navMenu" class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="uslugi.html">Услуги</a></li>
+                    <li><a href="ipoteka.html">Ипотека</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="otzyvy.html">Отзывы</a></li>
+                    <li><a href="staff.html">Сотрудники</a></li>
+                    <li><a href="karta.html">Адрес</a></li>
+
+                </ul>
+                <!-- КНОПКА ВНУТРИ БУРГЕР-МЕНЮ -->
+                <button class="call-btn mobile-only" id="mobileCallBtn">Заказать звонок</button>
+            </nav>
+
+            <!-- КНОПКА ДЛЯ ДЕСКТОПА -->
+            <button class="call-btn desktop-only" id="headerCallBtn">Заказать звонок</button>
+        </div>
+    </header>
+
+    <main class="staff-page">
+        <section class="staff-hero container">
+            <div class="staff-hero-text">
+                <h2>Команда Diamond Group</h2>
+                <p class="staff-hero-subtitle">
+                    За каждым объектом, ипотекой и сделкой стоят люди. Наши специалисты помогают пройти путь от первой консультации до получения ключей спокойно и уверенно.
+                </p>
+                <p class="staff-hero-subtitle">
+                    Здесь вы можете познакомиться с основными сотрудниками агентства.
+                </p>
+            </div>
+            <div class="staff-hero-photo">
+                <!-- ОБЩЕЕ ФОТО КОМАНДЫ (замените src на своё) -->
+                <img src="img/team-hero.jpg" alt="Команда Diamond Group">
+            </div>
+        </section>
+
+        <section class="reviews-section staff-section">
+            <h2>Наши специалисты</h2>
+            <div class="reviews-slider staff-slider">
+                <!-- Сотрудник 1 -->
+                <div class="review-card staff-card">
+                    <!-- ФОТО СОТРУДНИКА (замените src) -->
+                    <img src="img/staff1.jpg" alt="Имя Фамилия" class="staff-photo">
+
+                    <h3 class="staff-name">Имя Фамилия</h3>
+                    <p class="staff-position">Руководитель отдела продаж</p>
+                    <p class="staff-text">
+                        Консультирует по новостройкам и вторичному рынку, помогает подобрать оптимальную ипотечную программу и условия рассрочки. В недвижимости более 10 лет.
+                    </p>
+                    <p class="staff-contacts">
+                        Телефон: +7 (900) 000-00-01<br> WhatsApp / Telegram: @username
+                    </p>
+                </div>
+
+                <!-- Сотрудник 2 -->
+                <div class="review-card staff-card">
+                    <img src="img/staff2.jpg" alt="Имя Фамилия" class="staff-photo">
+
+                    <h3 class="staff-name">Имя Фамилия</h3>
+                    <p class="staff-position">Ипотечный брокер</p>
+                    <p class="staff-text">
+                        Подбирает ипотеку под 6% и ниже, работает со сложными ситуациями и нестандартным доходом. Объясняет условия простым языком и ведёт клиента до одобрения.
+                    </p>
+                    <p class="staff-contacts">
+                        Телефон: +7 (900) 000-00-02<br> Почта: broker@diamond-group.ru
+                    </p>
+                </div>
+
+                <!-- Сотрудник 3 -->
+                <div class="review-card staff-card">
+                    <img src="img/staff3.jpg" alt="Имя Фамилия" class="staff-photo">
+
+                    <h3 class="staff-name">Имя Фамилия</h3>
+                    <p class="staff-position">Медежер по продажам</p>
+                    <p class="staff-text">
+                        Знает районы города, инфраструктуру и реальные цены. Честно рассказывает как о плюсах, так и о нюансах объектов, чтобы вы приняли взвешенное решение.
+                    </p>
+                    <p class="staff-contacts">
+                        Телефон: +7 (900) 000-00-03<br> Почта: secondary@diamond-group.ru
+                    </p>
+                </div>
+
+                <!-- Сотрудник 4 -->
+                <div class="review-card staff-card">
+                    <img src="img/staff4.jpg" alt="Имя Фамилия" class="staff-photo">
+
+                    <h3 class="staff-name">Имя Фамилия</h3>
+                    <p class="staff-position">Медежер по продажам</p>
+                    <p class="staff-text">
+                        Проверяет юридическую чистоту объекта, готовит договоры и сопровождает регистрацию в Росреестре. Снижает риски для клиента на каждом этапе сделки.
+                    </p>
+                    <p class="staff-contacts">
+                        Телефон: +7 (900) 000-00-04<br> Почта: law@diamond-group.ru
+                    </p>
+                </div>
+
+                <!-- Сотрудник 5 -->
+                <div class="review-card staff-card">
+                    <img src="img/staff5.jpg" alt="Имя Фамилия" class="staff-photo">
+
+                    <h3 class="staff-name">Имя Фамилия</h3>
+                    <p class="staff-position">Медежер по продажам</p>
+                    <p class="staff-text">
+                        Организует показы, помогает с бронированием и всегда на связи по бытовым вопросам. Делает сотрудничество с агентством комфортным и понятным.
+                    </p>
+                    <p class="staff-contacts">
+                        Телефон: +7 (900) 000-00-05<br> Почта: service@diamond-group.ru
+                    </p>
+                </div>
+
+                <!-- Сотрудник 6 -->
+                <div class="review-card staff-card">
+                    <img src="img/staff6.jpg" alt="Имя Фамилия" class="staff-photo">
+
+                    <h3 class="staff-name">Имя Фамилия</h3>
+                    <p class="staff-position">Медежер по продажам</p>
+                    <p class="staff-text">
+                        Отвечает за качество сервиса, обучение сотрудников и сложные переговоры. Лично подключается к нестандартным ситуациям и контролирует ход сделок.
+                    </p>
+                    <p class="staff-contacts">
+                        Телефон: +7 (900) 000-00-06<br> Почта: office@diamond-group.ru
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">Diamond Group</div>
+                <ul class="footer-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="uslugi.html">Услуги</a></li>
+                    <li><a href="ipoteka.html">Ипотека</a></li>
+                    <li><a href="about.html">О компании</a></li>
+                    <li><a href="otzyvy.html">Отзывы</a></li>
+                    <li><a href="staff.html">Сотрудники</a></li>
+                    <li><a href="karta.html">Адрес</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Diamond Group — Агентство недвижимости. Все права защищены.</p>
+                <p>Телефон: +7 (918) 885-02-55 | Алексей </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно (оставил как на исходной странице) -->
+    <div id="callModal" class="modal">
+        <div class="modal-content styled-modal">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <h3>Свяжитесь с нашими специалистами</h3>
+            <div class="realtor-cards">
+                <div class="realtor-card">
+                    <div class="realtor-name">Алексей</div>
+                    <a href="tel:+79188850255">+7 (918) 885-02-55</a>
+                </div>
+                <div class="realtor-card">
+                    <div class="realtor-name">Роман</div>
+                    <a href="tel:+79181937973">+7 (918) 193-79-73</a>
+                </div>
+                <div class="realtor-card">
+                    <div class="realtor-name">Абел</div>
+                    <a href="tel:+79186925434">+7 (918) 692-54-34</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script/reviews.js"></script>
+</body>
+
+</html>
